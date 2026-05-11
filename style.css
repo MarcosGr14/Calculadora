@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd6e7;
+  font-family: 'Nunito', sans-serif;
+}
+
+.calculadora {
+  background-color: #fff0f6;
+  border-radius: 30px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
+  border: 3px solid #ffb3d9;
+  width: 300px;
+}
+
+.pantalla {
+  background-color: #ffe4f0;
+  border-radius: 20px;
+  padding: 16px 20px;
+  text-align: right;
+  margin-bottom: 16px;
+  border: 2px solid #ffb3d9;
+}
+
+#resultado {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #d63384;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  background-color: #ffd6e7;
+  border: 2px solid #ffb3d9;
+  border-radius: 15px;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d63384;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #ffb3d9;
+}
+
+.btn:active {
+  transform: scale(0.93);
+}
+
+.cero {
+  grid-column: span 2;
+}
+
+.sticker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  animation: flotar 2s ease-in-out infinite alternate;
+  background: none;
+  border: none;
+}
+
+@keyframes flotar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
